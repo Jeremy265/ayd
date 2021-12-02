@@ -27,7 +27,7 @@ const yes = () => {
 $(document).ready(() => {
     // Center abosulte buttons
    $(".btn").each((index, value) => {
-       $(value).css("left", $(value).outerWidth()*1.5);
+       $(value).css("left", "calc(50%-" + $(value).outerWidth()*1.5 + ")");
     });
    $("#btn-no").click(function() {
        moveElement($(this));
