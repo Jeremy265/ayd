@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Are u dumb ?</title>
+    <link rel="icon" type="image/png" href=""/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<style>
+    body {
+        height: 100vh;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    main {
+        height: 50%;
+        text-align: center;
+    }
+
+    #game {
+        height: 100%;
+    }
+
+    .title {
+        height: 25%;
+    }
+
+    .buttons-container {
+        display: flex;
+        flex-direction: row;
+        height: 75%;
+    }
+
+    .button-container {
+        position: relative;
+        height: 100%;
+        width: 50%;
+    }
+
+    .btn {
+        position: absolute;
+    }
+
+    #game-end {
+        height: 100%;
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+
+</style>
+<body>
+<main>
+    <div id="game-end">
+        <h1 id="yes">I knew it! :3</h1>
+    </div>
+    <div id="game">
+        <div class="title">
+            <h1>Are u dumb ?</h1>
+        </div>
+        <div class="buttons-container">
+            <div class="button-container">
+                <button class="btn btn-outline-secondary" id="btn-yes" style="bottom: 0">Yes</button>
+            </div>
+            <div class="button-container">
+                <button class="btn btn-outline-secondary" id="btn-no" style="bottom: 0">No</button>
+            </div>
+        </div>
+    </div>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="./js/script.js"></script>
+</body>
+</html>
