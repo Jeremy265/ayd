@@ -1,3 +1,5 @@
+let counter = 0;
+
 const getNewPosition = (elementToMove) => {
     const elementContainer = elementToMove.parent();
     // Get viewport dimensions (remove the dimension of the div)
@@ -24,15 +26,28 @@ const yes = () => {
     $("#game-end").css("display", "flex");
 }
 
+const chloe = () => {
+    $("#game").hide();
+    $("#game-end-chloe").css("display", "flex");
+}
+
 $(document).ready(() => {
     // Center abosulte buttons
-   $(".btn").each((index, value) => {
-       $(value).css("left", "calc(50%-" + $(value).outerWidth()*1.5 + ")");
+    $(".btn").each((index, value) => {
+        $(value).css("left", "calc(50%-" + $(value).outerWidth() * 1.5 + ")");
     });
-   $("#btn-no").click(function() {
-       moveElement($(this));
-   })
-    $("#btn-yes").click(function() {
+    $("#btn-no").click(function () {
+        moveElement($(this));
+        counter++
+        if (counter === 3) {
+            $("#btn-chloe").css('display', 'inline')
+        }
+    })
+
+    $("#btn-chloe").click(function () {
+        chloe();
+    })
+    $("#btn-yes").click(function () {
         yes();
     })
 });

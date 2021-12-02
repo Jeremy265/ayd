@@ -28,6 +28,7 @@
 
     .title {
         height: 25%;
+        text-align: center;
     }
 
     .buttons-container {
@@ -42,11 +43,15 @@
         width: 50%;
     }
 
-    .btn {
+    #btn-chloe {
+       display: none;
+    }
+
+    .btn:not(#btn-chloe) {
         position: absolute;
     }
 
-    #game-end {
+    #game-end, #game-end-chloe {
         height: 100%;
         display: none;
         justify-content: center;
@@ -57,11 +62,15 @@
 <body>
 <main>
     <div id="game-end">
-        <h1 id="yes">I knew it! :3</h1>
+        <h1>I knew it! :3</h1>
+    </div>
+    <div id="game-end-chloe">
+        <h1>You're not! 😘</h1>
     </div>
     <div id="game">
         <div class="title">
             <h1>Are u dumb ?</h1>
+            <button class="btn btn-success" id="btn-chloe">Chloé</button>
         </div>
         <div class="buttons-container">
             <div class="button-container">
